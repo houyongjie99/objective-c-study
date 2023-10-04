@@ -21,7 +21,7 @@
 #import <Foundation/Foundation.h>
 #import <Person.h>
 
-int main() {
+int main(int argc, const char * argv[]) {
   Person *p1 = [Person new]; //在Person.h文件中声明，在Person.m文件中定义
   return 0;
 }

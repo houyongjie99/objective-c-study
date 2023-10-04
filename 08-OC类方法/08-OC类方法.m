@@ -42,7 +42,7 @@
 + (void)walk;
 @end
 
-@implementaion Person
+@implementation Person
 - (void)run {
     NSLog(@"我是对象方法");
 }
@@ -56,17 +56,18 @@
     NSLog(@"我是类方法");
 }
 @end
-int main() {
+int main(int argc, const char * argv[]) {
     Person *p1 = [Person new]; //通过new方法创建一个对象
     Person *p2 = [Person PersonWith:@"hyj":15]; //通过类方法创建一个对象
     NSLog(@"未完待续~");
 
     NSString *str0 = [NSString new];
+    str0 = @"123"; //@"xxx"默认创建一个NSString类对象
     NSString *str1 = [NSString string];
-    NSLog("str0 addr = %p", str0); //%p打印str0的指针值（一个地址）
-    NSLog("str0 = %@", str0); //%@打印的是str0所指向的内容
-    NSLog("str1 addr = %p", str1); //%p打印str1的指针值（一个地址）
-    NSLog("str1 = %@", str1); //%@打印的是str0所指向的内容
+    NSLog(@"str0 addr = %p", str0); //%p打印str0的指针值（一个地址）
+    NSLog(@"str0 = %@", str0); //%@打印的是str0所指向的内容
+    NSLog(@"str1 addr = %p", str1); //%p打印str1的指针值（一个地址）
+    NSLog(@"str1 = %@", str1); //%@打印的是str0所指向的内容
     NSLog(@"over");
     return 0;
 }

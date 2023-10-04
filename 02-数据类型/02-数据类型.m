@@ -66,7 +66,7 @@
 
 #import <Foundation/Foundation.h>
 
-int main() {
+int main(int argc, const char * argv[]) {
   int num1 = 1;
   int num2 = 2;
   BOOL b1 = num1 > num2; //使用Boolean有同等效果

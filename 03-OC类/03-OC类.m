@@ -116,7 +116,7 @@
 }
 @end
 
-int main() {
+int main(int argc, const char * argv[]) {
   //创建一个类对象
   Person *p1 = [Person new];
   p1->_name = @"hyj";
