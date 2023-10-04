@@ -72,6 +72,8 @@ int main(int argc, const char * argv[]) {
   //p1 p2 p3都指向一个对象，修改任意一个，另外两个也会改变
   Person *p1 = [Person new];
   Person *p2 = nil; //p2指针目前不指向任何对象，如果此时去访问对象的属性，会出错；如果去调用对象的方法，运行不报错，但是方法不会执行，无反应
+  [p2 run]; //不报错，但是无反应，不执行
   p2 = p1;
+  [p2 run]; //正常执行
   Person *p3 = p2;
 }

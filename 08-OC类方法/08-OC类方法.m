@@ -58,7 +58,7 @@
 @end
 int main(int argc, const char * argv[]) {
     Person *p1 = [Person new]; //通过new方法创建一个对象
-    Person *p2 = [Person PersonWith:@"hyj":15]; //通过类方法创建一个对象
+    Person *p2 = [Person PersonWith:@"hyj" andAge:15]; //通过类方法创建一个对象
     NSLog(@"未完待续~");
 
     NSString *str0 = [NSString new];
