@@ -22,6 +22,11 @@
     写一个类的时候要为这个类提供一个和类名同名的类方法，这个方法的功能是返回一个最纯洁的类对象（相当于构造函数）
     这个类也可以传入参数来初始化一些必须的属性值 如 PersonWith:(NSString*)name andAge:(int)age;
 
+注意：
+    NSString也是一个Foundation框架下的类方法
+    可以通过下面的方法创建NSString对象
+    NSString *str0 = [NSString new];
+    NSString *str1 = [NSString string];
 
 */
 
@@ -54,6 +59,14 @@
 int main() {
     Person *p1 = [Person new]; //通过new方法创建一个对象
     Person *p2 = [Person PersonWith:@"hyj":15]; //通过类方法创建一个对象
+    NSLog(@"未完待续~");
+
+    NSString *str0 = [NSString new];
+    NSString *str1 = [NSString string];
+    NSLog("str0 addr = %p", str0); //%p打印str0的指针值（一个地址）
+    NSLog("str0 = %@", str0); //%@打印的是str0所指向的内容
+    NSLog("str1 addr = %p", str1); //%p打印str1的指针值（一个地址）
+    NSLog("str1 = %@", str1); //%@打印的是str0所指向的内容
     NSLog(@"over");
     return 0;
 }
